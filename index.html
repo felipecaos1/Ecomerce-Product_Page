@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+ <script src="app.js"></script>
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="secction-header">
+    <div class="menu-movil-icon">
+      <img id="menu-icon-movil" src="images/icon-menu.svg" alt="">
+    </div>
+    <div class="site-logo">
+      <img src="images/logo.svg" alt="logo">
+    </div> 
+    <div class="nav-menu">
+      <nav class="menu-principal">
+        <ul class="menu-items">
+          <li class="menu-item">Collections</li>
+          <li class="menu-item">Men</li>
+          <li class="menu-item">Women</li>
+          <li class="menu-item">About</li>
+          <li class="menu-item">Contact</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="carrito-cuenta">
+      <div><img id="carrito-icon" src="images/icon-cart.svg" alt="">
+        <span id="indicador" class="ocultar-product-cart">3</span>
+      </div>
+      
+      
+      <div class="drop-carrito">
+        <div class="titulo-carrito">
+          <h3>Cart</h3>
+        </div>
+        <div class="carrito-vacio ">
+          <h3>Your cart is empty</h3>
+        </div>
+        <div class="contenido-carrito ocultar-product-cart">
+            <div class="productos-cart">
+              <div class="thum-img">
+                <img class="img-cart" src="images/image-product-1-thumbnail.jpg" alt="">
+              </div>
+              <div class="descripcion-product">
+                <h5 class="title-cart-p">Fall Limited Edition Sneakers</h5>
+                  <div class="info-precio">
+                    <h5 class="precio-product-cart">$125.00</h5>
+                    <h5 class="x">x</h5>
+                    <h5 id="cantidad-cart">3</h5>
+                    <h5 class="sub-total">$375.00</h5>
+                  </div>
+              </div>
+              <div class="borrar">
+                <img id="borrar-p" src="images/icon-delete.svg" alt="">
+              </div>
+            </div>
+          <div class="div-btn-check">
+            <button id="btn-check">Checkout</button>
+          </div>
+        </div>
+        
+      </div>
+      
+      <img class="avatar" src="images/image-avatar.png" alt="">
+    </div>
+  </div>
+</header>
+
+<section id="lightBox" class="ocultar-lb">
+  <div class="cerrar">
+    <img src="images/icon-close.svg" alt="">
+  </div>
+  
+  <div class="">
+    <div class="lb-img-principal">
+      <div class="flechas">
+        <div class="arrow-prev">
+          <img id="arrow-prev2" src="images/icon-previous.svg" alt="">
+        </div>
+        <div class="arrow-next">
+          <img id="arrow-next2" src="images/icon-next.svg" alt="">
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    <div class="grid-thumbnail-lb">
+      <div class="img-thumb-lb">
+        <div id="img1"class="overaly-lb tumb-active "></div>
+        <img id="1a" src="images/image-product-1-thumbnail.jpg" alt="">
+      </div>
+      <div class="img-thumb-lb">
+        <div id="img2" class="overaly-lb "></div>
+        <img id="2a" src="images/image-product-2-thumbnail.jpg" alt="">
+      </div>
+      <div class="img-thumb-lb">
+        <div id="img3" class="overaly-lb"></div>
+        <img id="3a" src="images/image-product-3-thumbnail.jpg" alt="">
+      </div>
+      <div class="img-thumb-lb">
+        <div id="img4" class="overaly-lb"></div>
+        <img id="4a" src="images/image-product-4-thumbnail.jpg" alt="">
+      </div>
+    </div>
+    
+  </div>
+</section>
+<section class="content-full">
+  <div class="section-2">
+    <div class="col-1">
+    <div class="img-principal">
+      <div class="flechas-destok">
+        <div class="arrow-prev">
+          <img id="prev-destok" src="images/icon-previous.svg" alt="">
+        </div>
+        <div class="arrow-next">
+          <img id="next-destok" src="images/icon-next.svg" alt="">
+        </div>
+
+      </div>
+    </div>
+    <div class="grid-thumbnail">
+      <div class="img-thumb ">
+        <div id="des1" class="overaly tumb-active"></div>
+        <img id="1" src="images/image-product-1-thumbnail.jpg" alt="">
+      </div>
+      <div class="img-thumb">
+        <div id="des2" class="overaly "></div>
+        <img id="2" src="images/image-product-2-thumbnail.jpg" alt="">
+      </div>
+      <div class="img-thumb">
+        <div id="des3" class="overaly "></div>
+        <img id="3" src="images/image-product-3-thumbnail.jpg" alt="">
+      </div>
+      <div class="img-thumb">
+        <div id="des4" class="overaly "></div>
+        <img id="4" src="images/image-product-4-thumbnail.jpg" alt="">
+      </div>
+    </div>
+      
+    </div>
+    <div class="col-2">
+      <h4 class="name-company">Sneaker Company</h4>
+      <h2 class="product-title">Fall Limited Edition <br> Sneakers</h2>
+      <p class="product-text">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="precio-content">
+        <h4 id="costo" class="product-price">$125.00</h4>
+        <h5 class="discount-percentage">50%</h5>
+        <h5 class="real-price">$250.00</h5>
+      </div>
+      <div class="option-add">
+        <div class="div-cantidad">
+          <button id="btn-minus"><img src="images/icon-minus.svg" alt=""></button>
+          <h4 id="label-count">1</h4>
+          <button id="btn-plus"><img src="images/icon-plus.svg" alt=""></button>
+        </div>
+        <div class="div-btn-add">
+          <button id="btn-add">Add to cart</button>
+        </div>
+      </div>
+      
+      
+      
+    </div>
+    
+  </div>
+
+</section>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Felipe Castro</a>.
+  </div>
+  <section id="menu-movil-aside" class="">
+    <div class="sub-content">
+      <div class="cerrar-menu-movil">
+        <img id="cerrar-aside" src="images/icon-close.svg" alt="">
+      </div>
+      <div class="content-menu-movil">
+        <ul class="menu-items-movil">
+          <li class="menu-item-movil">Collections</li>
+          <li class="menu-item-movil">Men</li>
+          <li class="menu-item-movil">Women</li>
+          <li class="menu-item-movil">About</li>
+          <li class="menu-item-movil">Contact</li>
+        </ul>
+      </div>
+    </div>
+   
+  </section>
+</body>
+</html>
