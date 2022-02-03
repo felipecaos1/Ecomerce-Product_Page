@@ -73,12 +73,12 @@ $(document).ready(function(){
 //!Carrusel responsive movil
    $("#prev-destok").click(function(){
     var imagenes=["url(images/image-product-1.jpg)","url(images/image-product-2.jpg)","url(images/image-product-3.jpg)","url(images/image-product-4.jpg)"];
-    var idactive= $(".tumb-active")[0].id;
+    var idactive= $(".grid-thumbnail .tumb-active")[0].id;
     if(idactive!="des1"){
         var x=parseInt(idactive[idactive.length-1],10);
         
         $("#"+idactive).removeClass("tumb-active");
-        var newid="img"+(x-1);
+        var newid="des"+(x-1);
         $("#"+newid).addClass("tumb-active");
         $(".img-principal").css("background-image", imagenes[x-2]);
 
@@ -91,11 +91,11 @@ $(document).ready(function(){
    $("#next-destok").click(function(){
     var imagenes=["url(images/image-product-1.jpg)","url(images/image-product-2.jpg)","url(images/image-product-3.jpg)","url(images/image-product-4.jpg)"];
 
-    var idactive= $(".tumb-active")[0].id;
+    var idactive= $(".grid-thumbnail .tumb-active")[0].id;
     if(idactive!="des4"){
         var x=parseInt(idactive[idactive.length-1],10);
         $("#"+idactive).removeClass("tumb-active");
-        var newid="img"+(x+1);
+        var newid="des"+(x+1);
         $("#"+newid).addClass("tumb-active");
         $(".img-principal").css("background-image", imagenes[x]);
     }
