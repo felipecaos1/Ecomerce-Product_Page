@@ -1,8 +1,10 @@
+/*Añadimos una linea al css*/
 body{
     padding: 0;
     margin: 0;
 }
 /* estilo para la cabecera*/
+
 header{
     display: flex;
     justify-content: center;
