@@ -1,3 +1,4 @@
+//!comentario en el css
 $(document).ready(function(){
     $(".img-thumb").click(function(){
         //!agregamos la capa que indica que thum esta seleccionada
